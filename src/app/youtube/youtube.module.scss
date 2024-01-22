@@ -1,0 +1,13 @@
+.youtube {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	h1 {
+		width: 100%;
+		font-size: 2rem;
+		font-weight: normal;
+		margin-bottom: 60px;
+	}
+}
