@@ -4,7 +4,7 @@ import { addPost } from '@/lib/actions';
 import InputImage from '@/components/inputImage/InputImage';
 import { auth } from '@/lib/auth';
 import ImageUploader from '@/components/uploadImage/UploadImage';
-
+//.
 export default async function Write() {
 	const session = await auth();
 
