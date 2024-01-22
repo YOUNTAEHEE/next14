@@ -2,15 +2,19 @@ import clsx from 'clsx';
 import styles from './write.module.scss';
 import { addPost } from '@/lib/actions';
 import InputImage from '@/components/inputImage/InputImage';
-import ImageUploader from '@/components/UploadImage/UploadImage';
+import { auth } from '@/lib/auth';
+import ImageUploader from '@/components/uploadImage/UploadImage';
 
-export default function Write() {
+export default async function Write() {
+	const session = await auth();
+
 	return (
 		<>
 			<section className={clsx(styles.write)}>
 				<h1>Write Post</h1>
 
 				<form action={addPost}>
+					<input type='hidden' name='email' defaultValue={session.user.email} />
 					<input type='text' placeholder='title' name='title' />
 					<InputImage />
 					<ImageUploader />

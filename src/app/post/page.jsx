@@ -10,7 +10,7 @@ export default async function Post({ searchParams }) {
 	const session = await auth();
 	const page = searchParams?.page || 1;
 	const { total, posts, nums } = await getPostsPage(page);
-	console.log('page', session);
+
 	return (
 		<section className={clsx(styles.post)}>
 			<h1>Post</h1>
