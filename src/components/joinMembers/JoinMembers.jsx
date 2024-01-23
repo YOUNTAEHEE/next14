@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { addUser } from '@/lib/actions';
 //.
+//.
 export default function JoinMembers() {
 	const [state, formAction] = useFormState(addUser, undefined);
 	const router = useRouter();
